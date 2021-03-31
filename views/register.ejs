@@ -1,0 +1,25 @@
+<h1>
+	register page
+</h1>
+
+<form action="/register" method="post">
+	<% if(success_messages !=' ' ){ %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong> Error </strong>
+                    <%= success_messages %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } %>
+
+	<div>
+		<label for="name">Name</label>
+		<input type="text" name="username" id="name" required>
+	</div>
+	
+	<div>
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" required>
+	</div>
+	<button type="submit">Register</button>
+</form>
+<a href="/login">Already a User?</a>

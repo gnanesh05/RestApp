@@ -1,0 +1,30 @@
+<h1>
+	Login page
+</h1>
+
+<form action="/login" method="post">
+	<% if(success_messages !=' ' ){ %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong> success </strong>
+                    <%= success_messages %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } %>
+	<% if(error !=' ' ){ %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong> Error </strong>
+                    <%= error %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } %>
+	<div>
+		<label for="email">username</label>
+		<input type="text" name="username" id="email" required>
+	</div>
+	<div>
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" required>
+	</div>
+	<button type="submit">Login</button>
+</form>
+<a href="/login">Not a User?</a>

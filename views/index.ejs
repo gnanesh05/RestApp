@@ -1,0 +1,36 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="ui main text container">
+   	<div class="ui huge header">Blog Site</div>
+    <div class="ui top attached segment">
+<div class="ui divided items">
+	<% notes.forEach(function(note){ %>
+	 <div class="item">
+	    <div class="image">
+	      <img src="<%= note.image %>">
+	    </div>
+	    <div class="content">
+	      <a class="header"><%= note.title %></a>
+	      <div class="meta">
+	        <span class="cinema"><%= note.created.toDateString() %></span>
+	      </div>
+	      <div class="description">
+	        <p><%= note.body.substring(0,100); %></p>
+	      </div>
+	      <div class="extra">
+	        <a href="/notes/<%=note._id %>" class="ui floated basic violet button">
+	          Read More
+	          <i class="right chevron icon"></i>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	<% }); %>
+</div>
+</div>
+    
+  </div>
+
+
+
+<%- include("./partials/footer.ejs") %>
