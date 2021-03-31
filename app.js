@@ -249,10 +249,10 @@ app.post('/login',(req,res,next)=>{
 });
 
 //logout
-app.get('/logout',(res,req)=>{
-  req.logout();
-   req.flash("success", "you've logged out");
-   res.redirect("/login");
-});
+// app.get('/logout',(res,req)=>{
+//   //req.logout();
+//    //req.flash("success", "you've logged out");
+//    res.redirect("/login");
+// });
 	
 	
