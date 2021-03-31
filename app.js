@@ -40,8 +40,9 @@ app.use(function (req, res, next) {
     res.locals.error = req.flash('error');
     next();
 });
+const port = process.env.PORT|| 6000;
 
-app.listen(6000, function()
+app.listen(port, function()
 		  {
 	     console.log("port at 6000");
 });
@@ -108,7 +109,7 @@ app.post("/notes",function(req,res){
 
 app.get("/",function(req,res)
 		{
-	res.redirect("/notes");
+	res.redirect("/register");
         });
 
 //show
